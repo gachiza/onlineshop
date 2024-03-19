@@ -9,9 +9,17 @@ def index (request):
 
 def shopping (request):
     myshopping=Shopping.objects.all().values()
-    template=loader.get_template('myfirst.html')
+    template=loader.get_template('shopping.html')
     context = {
     'myshopping': myshopping,
   }
     return HttpResponse(template.render(context, request))
+
+def details(request, id):
+  myshopping = Shopping.objects.get(id=id)
+  template = loader.get_template('details.html')
+  context = {
+    'myshopping': myshopping,
+  }
+  return HttpResponse(template.render(context, request))
 # Create your views here.
