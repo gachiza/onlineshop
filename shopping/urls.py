@@ -6,7 +6,7 @@ app_name='shopping'
 urlpatterns=[
     path("shopping/",views.index),
     path('shopping/details/<int:id>/', views.details, name='details'),
-     path('testing/', views.testing, name='testing'),
+    path('testing/', views.testing, name='testing'),
 
 ]
 
