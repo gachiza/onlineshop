@@ -1,7 +1,9 @@
 from django.contrib import admin
 from .models import Shopping
 
-
-admin.site.register(Shopping)
-
 # Register your models here.
+
+class ShoppingAdmin(admin.ModelAdmin):
+  list_display = ("firstname", "lastname", "joined_date",)
+  
+admin.site.register(Shopping, ShoppingAdmin)
