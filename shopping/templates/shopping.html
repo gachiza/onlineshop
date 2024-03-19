@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html>
-<body>
+{% extends "master.html" %}
 
-<h1>Shopping</h1>
+{% block title %}
+  My Shopping Club - List of all members
+{% endblock %}
+
+
+{% block content %}
+
+  <p><a href="/">HOME</a></p>
+
+  <h1>Shopping</h1>
   
-<ul>
-  {% for x in myshopping %}
-    <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
-  {% endfor %}
-</ul>
-
-</body>
-</html>
+  <ul>
+    {% for x in myshopping %}
+      <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

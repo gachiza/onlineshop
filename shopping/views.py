@@ -13,7 +13,7 @@ def shopping (request):
     context = {
     'myshopping': myshopping,
   }
-    return HttpResponse(template.render(context, request))
+    return render(request, 'shopping.html', context)  
 
 def details(request, id):
   myshopping = Shopping.objects.get(id=id)
@@ -21,5 +21,17 @@ def details(request, id):
   context = {
     'myshopping': myshopping,
   }
-  return HttpResponse(template.render(context, request))
+  return render(request, 'details.html', {'myshopping': myshopping})
+
+def main(request):
+  template = loader.get_template('main.html')
+  return render(request, 'main.html')
+
+def testing(request):
+  template = loader.get_template('template.html')
+  context = {
+    'fruits': ['Apple', 'Banana', 'Cherry'],   
+  }
+  return render(request,'testing')
+    
 # Create your views here.

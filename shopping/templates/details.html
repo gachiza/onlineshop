@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html>
+{% extends "master.html" %}
 
-<body>
+{% block title %}
+  Details about {{ myshopping.firstname }} {{ myshopping.lastname }}
+{% endblock %}
 
-<h1>{{ myshopping.firstname }} {{ myshopping.lastname }}</h1>
+
+{% block content %}
+  <h1>{{ myshopping.firstname }} {{ myshopping.lastname }}</h1>
   
-<p>Phone: {{ mymember.phone }}</p>
-<p>Member since: {{ mymember.joined_date }}</p>
-
-<p>Back to <a href="/shopping">Shopping</a></p>
-
-</body>
-</html>
+  <p>Phone {{ myshopping.phone }}</p>
+  <p>Shopping since: {{ myshopping.joined_date }}</p>
+  
+  <p>Back to <a href="/shopping">Shopping</a></p>
+  
+{% endblock %}
