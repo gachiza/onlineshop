@@ -31,5 +31,13 @@ class Order(models.Model):
 class OrderItem(models.Model):
     product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
     order= models.ForeignKey(Order, on_delete= models.SET_NULL,null=True)
+    quantity= models.IntegerField(default=0, null=True, blank=True)
     date_added= models.DateTimeField(auto_now_add=True)
-    
+
+
+class DeliveryAddress(models.Model):
+    customer= models.ForeignKey(Customer, on_delete=models.SET_NULL, null= True)
+    order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
+    adress= models.CharField(max_length=200,null=False)
+    city= models.CharField(max_length=200,null=False)
+    date_added= models.DateTimeField(auto_now_add=True)
