@@ -143,6 +143,58 @@ h1,h2,h3,h4,h5,h6{
     background-color: white;
   }
 
+
+.footer-1 {
+    background-color: #afafaf;
+    color: #fff;
+    padding: 30px 0;
+    margin: 20px;
+}
+  
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+  
+.contacts,
+.social-media {
+    flex-basis: 45%;
+}
+  
+.contacts h2,
+.social-media h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+  
+.contacts p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+  
+.social-media ul {
+    padding: 0;
+    list-style: none;
+}
+  
+.social-media ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+  
+.social-media ul li:last-child {
+    margin-right: 0;
+}
+  
+.social-media ul li a img {
+    width: 40px;
+    height: 40px;
+}
+
 footer {
     background-color: #333;
     color: #fff;
