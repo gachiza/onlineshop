@@ -6,9 +6,14 @@ from .forms import *
 # Create your views here.
 
 
-def index(request):
+def registration(request):
     context={}
-    return render(request, "ecommerce/index.html", context)
+    return render(request, "ecommerce/registration.html", context)
+
+def footer(request):
+    context={}
+    return render(request, "ecommerce/footer.html", context)
+
 
 def store(request):
     context={}
