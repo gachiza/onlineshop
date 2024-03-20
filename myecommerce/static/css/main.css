@@ -54,6 +54,12 @@ h1,h2,h3,h4,h5,h6{
 	border-radius: 0;
 }
 
+.btn:hover {
+    background-color:antiquewhite;
+    color: rgb(4, 4, 197);
+    border-color: black;
+}
+
 .row-image{
 	width: 100px;
 }
@@ -96,4 +102,69 @@ h1,h2,h3,h4,h5,h6{
 
 .hidden{
 	display: none!important;
+}
+
+
+.wrapper {
+    position: relative;
+    display: flex;
+    min-width: 100px;
+    margin-right: 20px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 13px;
+    left: 12px;
+    width: 14px;
+  }
+  
+  .clear-icon {
+    position: absolute;
+    top: 9px;
+    right: 8px;
+    width: 20px;
+    cursor: pointer;
+    visibility: hidden;
+  }
+    
+  .search {
+    border: 1px solid grey;
+    border-radius: 15px;
+    height: 20px;
+    width: 100%;
+    padding: 18px 23px 18px 30px;
+    outline: 0;
+    background-color: #f5f5f5;
+  }
+    
+  .search:hover, .search:focus {
+    border: 1.5px solid #009688;
+    background-color: white;
+  }
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
 }

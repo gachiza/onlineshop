@@ -18,12 +18,12 @@
             <h2 class="welcome">Welcome to</h2>
             <h1 class="Store-name">Ecom Store</h1>
             <p class="welcome-note">Discover a wide range of products to suit your needs.</p>
-            <a href="featured-products" class="btn">Shop Now</a>
-            <img src="shopping-cart.png" class="shop-cart" alt="">
+            <a href="{% url 'store'%}" class="btn">Shop Now</a>
+            <img src="{% static 'images/shopping-cart.png' %}" class="shop-cart" alt="">
         </div>
         <div class="sign-in-sign-up">
-            <button class="sign-up">Sign Up</button>
-            <button class="register">Register</button>
+            <a href="{% url 'sign-up'%}"><button class="sign-up">Sign Up</button></a>
+            <a href="{% url 'register'%}"><button class="register">Register</button></a> 
         </div>
     </section>
 
@@ -34,12 +34,12 @@
         </div>
         <div class="section-2-bottom">
             <div>
-                <button class="buy-button">BUY</button>
-                <p>Buy your product with just on click at your convenience</p>
+               <a href="{% url 'store'%}"><button class="buy-button">BUY</button></a>
+               <p>Buy your product with just on click at your convenience</p>
             </div>
             <div>
-                <button class="sell-button"> SELL</button>
-                <p>Sell your product with just on click at your convenience</p>
+               <a href="{% url 'register'%}"><button class="sell-button"> SELL</button></a>
+               <p>Sell your product with just on click at your convenience</p>
             </div>
         </div>
 
@@ -95,9 +95,9 @@
 
     <section id="featured-products" class="featured-products">
         <div class="section-3-1">
-            <h2>Post Your Products</h2>
+            <h2>Products</h2>
             <img src="{% static 'images/shopping-venture.png' %}" class="shopping-venture">
-            <button class="register">Register</button>
+            <a href="{% url 'register'%}"><button class="register">Register</button></a> 
             <p>Register your business now and sell your products with just one tap.</p>
         </div>
         <div class="product">
@@ -180,24 +180,14 @@
             <div class="social-media">
               <h2>Follow Us</h2>
               <ul>
-                <li><a href="#"><img src="Facebook-icon.webp" alt="Facebook"></a></li>
-                <li><a href="#"><img src="x_logo.png" alt="Twitter"></a></li>
-                <li><a href="#"><img src="Instagram-icon.jpg" alt="Instagram"></a></li>
-                <li><a href="#"><img src="LinkedIn_icon.png" alt="LinkedIn"></a></li>
+                <li><a href="#"><img src="{% static 'images/Facebook-icon.webp' %}" alt="Facebook"></a></li>
+                <li><a href="#"><img src="{% static 'images/x_logo.png' %}" alt="X"></a></li>
+                <li><a href="#"><img src="{% static 'images/Instagram-icon.jpg' %}" alt="Instagram"></a></li>
+                <li><a href="#"><img src="{% static 'images/LinkedIn_icon.png' %}" alt="LinkedIn"></a></li>
               </ul>
             </div>
         </div>
     </section>
-
-    <footer>   
-        <div class="footer-content">
-            <p>&copy; 2024 Ecom Store. All Rights Reserved.</p>
-            <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-            </ul>
-        </div>
-    </footer>
 </body>
 </html>
 
