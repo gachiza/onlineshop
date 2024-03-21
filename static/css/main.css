@@ -106,10 +106,8 @@ h1,h2,h3,h4,h5,h6{
 
 
 .wrapper {
-    position: relative;
     display: flex;
-    min-width: 100px;
-    margin-right: 20px;
+    position: relative;
   }
   
   .search-icon {
@@ -130,12 +128,12 @@ h1,h2,h3,h4,h5,h6{
     
   .search {
     border: 1px solid grey;
-    border-radius: 15px;
+    border-radius: 4px;
     height: 20px;
     width: 100%;
     padding: 18px 23px 18px 30px;
     outline: 0;
-    background-color: #f5f5f5;
+    background-color: #fff;
   }
     
   .search:hover, .search:focus {
@@ -219,4 +217,79 @@ footer ul li a {
 
 footer ul li a:hover {
     text-decoration: underline;
+}
+
+* {
+    margin:0;
+    padding:0;
+}
+footer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-family:"Poppins";
+    color:white;
+    background-color: darkgreen;
+    padding-top:50px;
+    padding-bottom:20px;
+    font-size:17px;
+}
+.about,
+.reachout,
+.reachout span,
+.contacts {
+    display: flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.reachout span {
+    flex-direction: row;
+}
+.reachout i {
+    margin-right: 10px;
+}
+footer h2, footer h1 {
+    color:white;
+}
+.darkgreen {
+    background-color: darkgreen;
+}
+.btns {
+    display: flex;
+    justify-content: right;
+}
+.nav-mine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 10px;
+}
+.nav-mine > * {
+    flex:1;
+}
+.mid-section {
+    flex:5;
+}
+.dropdown {
+    cursor: pointer;
+    position: relative;
+}
+.dropdown span {
+    height: 5px;
+    width: 30px;
+    position: absolute;
+    background-color: white;
+    transition: all 0.3s linear;
+}
+.dropdown span:nth-child(1) {
+    transform:translateY(-10px);
+}
+.dropdown span:nth-child(3) {
+    transform:translateY(10px);
+}
+.dropdown:active span:nth-child(1) {
+    transform:translateY(0px) rotate(45deg);
 }

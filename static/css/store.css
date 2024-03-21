@@ -47,16 +47,17 @@
 
 .register {
     border: none;
-    border-radius: 10px;
-    background-color: #ececec;
+    border-radius: 4px;
+    background-color: #fff;
     padding: 5px 10px 5px 10px;
+    margin:0 10px;
+    transition:all 0.3s ease-in;
 }
 
 .register:hover,
 .register::after {
     color: blue;
     border: none;
-    border-radius: 10px;
     background-color: #ececec;
 }
 
