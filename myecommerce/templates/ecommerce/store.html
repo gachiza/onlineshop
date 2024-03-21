@@ -1,0 +1,173 @@
+{% extends 'ecommerce/main.html' %}
+{% load static %}
+{% block title %}Store{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/store.css' %}">
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <h2 class="welcome">Welcome to</h2>
+            <h1 class="Store-name">Ecom Store</h1>
+            <p class="welcome-note">Discover a wide range of products to suit your needs.</p>
+            <a href="{% url 'store'%}" class="btn">Shop Now</a>
+            <img src="{% static 'images/shopping-cart.png' %}" class="shop-cart" alt="">
+        </div>
+        <div class="sign-in-sign-up">
+            <a href="{% url 'sign-up'%}"><button class="sign-up">Sign Up</button></a>
+            <a href="{% url 'register'%}"><button class="register">Register</button></a> 
+        </div>
+    </section>
+
+    <section id="categories" class="section-2">
+        <div class="section-2-top">
+            <h1 class="section-2-left">How to promote your business on Ecom Store?</h1>
+            <h3> Join us as we promote a world wide market for all types of products.</h3>
+        </div>
+        <div class="section-2-bottom">
+            <div>
+               <a href="{% url 'store'%}"><button class="buy-button">BUY</button></a>
+               <p>Buy your product with just on click at your convenience</p>
+            </div>
+            <div>
+               <a href="{% url 'register'%}"><button class="sell-button"> SELL</button></a>
+               <p>Sell your product with just on click at your convenience</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="category">
+        <h2>Product Category</h2>
+        <div class="item">
+            <a href="#"><img src="{% static 'images/Fashion.png' %}" alt="Category 1"></a>
+            <a href="#"><p>Fashion</p></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'images/Home.png' %}" alt="Category 2"></a>
+            <a href="#"><p>Home</p></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'images/images.png' %}" alt="Category 3"></a>
+            <a href="#"><p>Office</p></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'images/Health & beauty.jpg' %}" alt="Category 4"></a>
+            <a href="#"><p>Health & Beauty</p></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'images/Appliances.png' %}" alt="Category 5"></a>
+            <a href="#"><p>Appliances</p></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'images/Phones.png' %}" alt="Category 6"></a>
+            <a href="#"><p>Phones</p></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'images/Tvs.webp' %}" alt="Category 7"></a>
+            <a href="#"><p>TVs & Audio</p></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'images/Gaming-and-sports.png' %}" alt="Category 8"></a>
+            <a href="#"><p>Gaming & Sports</p></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'images/Computing.png' %}" alt="Category 9"></a>
+            <a href="#"><p>Computing</p></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'images/Healthy-foods.jpg' %}" alt="Category 10"></a>
+            <a href="#"><p>Foods</p></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'images/other.png' %}" alt="Category 11"></a>
+            <a href="#"><p>Others</p></a>
+        </div>
+    </section>
+
+    <section id="featured-products" class="featured-products">
+        <div class="section-3-1">
+            <h2>Products</h2>
+            <img src="{% static 'images/shopping-venture.png' %}" class="shopping-venture">
+            <a href="{% url 'register'%}"><button class="register">Register</button></a> 
+            <p>Register your business now and sell your products with just one tap.</p>
+        </div>
+        <div class="product">
+            <a href="#" class="thumb"><img src="{{ object.image.url }}" alt="Image Preview"></a>
+            <a href="#"><h3>{{ product.name }}</h3></a>
+            <p>{{ product.description }}</p>
+            <span>Price: UGX{{ product.price }}</span>
+        </div>
+        <div class="product">
+            <a href="#" class="thumb"><img src="{{ object.image.url }}" alt="Image Preview"></a>
+            <a href="#"><h3>{{ product.name }}</h3></a>
+            <p>{{ product.description }}</p>
+            <span>Price: UGX{{ product.price }}</span>
+        </div>
+        <div class="product">
+            <a href="#" class="thumb"><img src="{{ object.image.url }}" alt="Image Preview"></a>        
+            <a href="#"><h3>{{ product.name }}</h3></a>
+            <p>{{ product.description }}</p>
+            <span>Price: UGX{{ product.price }}</span>
+        </div>
+        <div class="product">
+            <a href="#" class="thumb"><img src="{{ object.image.url }}" alt="Image Preview"></a>
+            <a href="#"><h3>{{ product.name }}</h3></a>
+            <p>{{ product.description }}</p>
+            <span>Price: UGX{{ product.price }}</span>
+        </div>
+        <div class="product">         
+            <a href="#" class="thumb"><img src="{{ object.image.url }}" alt="Image Preview"></a>
+            <a href="#"><h3>{{ product.name }}</h3></a>
+            <p>{{ product.description }}</p>
+            <span>Price: UGX{{ product.price }}</span>
+        </div>
+        <div class="product">
+            <a href="#" class="thumb"><img src="{{ object.image.url }}" alt="Image Preview"></a>    
+            <a href="#"><h3>{{ product.name }}</h3></a>          
+            <p>{{ product.description }}</p>
+            <span>Price: UGX{{ product.price }}</span>
+        </div>
+        <div class="product">
+            <a href="#" class="thumb"><img src="{{ object.image.url }}" alt="Image Preview"></a>           
+            <a href="#"><h3>{{ product.name }}</h3></a>           
+            <p>{{ product.description }}</p>
+            <span>Price: UGX{{ product.price }}</span>
+        </div>
+        <div class="product">
+            <a href="#" class="thumb"><img src="{{ object.image.url }}" alt="Image Preview"></a>            
+            <a href="#"><h3>{{ product.name }}</h3></a>           
+            <p>{{ product.description }}</p>
+            <span>Price: UGX{{ product.price }}</span>
+        </div>
+        <div class="product">
+            <a href="#" class="thumb"><img src="{{ object.image.url }}" alt="Image Preview"></a>            
+            <a href="#"><h3>{{ product.name }}</h3></a>           
+            <p>{{ product.description }}</p>
+            <span>Price: UGX{{ product.price }}</span>
+        </div>
+        <div class="product">
+            <a href="#" class="thumb"><img src="{{ object.image.url }}" alt="Image Preview"></a>
+            <a href="#"><h3>{{ product.name }}</h3></a>
+            <p>{{ product.description }}</p>
+            <span>Price: UGX{{ product.price }}</span>
+        </div>
+        <div class="product">
+            <a href="#" class="thumb"><img src="{{ object.image.url }}" alt="Image Preview"></a>
+            <a href="#"><h3>{{ product.name }}</h3></a>
+            <p>{{ product.description }}</p>
+            <span>Price: UGX{{ product.price }}</span>
+        </div>
+    </section>
+</body>
+</html>
+
+{% endblock content %}
