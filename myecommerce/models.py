@@ -1,5 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
+# models.
+
+class Item(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    category = models.CharField(max_length=50)
+
 
 class Customer(models.Model): 
     user= models.OneToOneField(User, null=True,blank=True, on_delete=models.CASCADE)
