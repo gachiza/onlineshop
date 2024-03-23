@@ -1,0 +1,63 @@
+{% extends 'ecommerce/main.html' %}
+{% load static %}
+{% block content %}
+
+<section class="hero">
+    <div class="container">
+        <h2 class="welcome">Welcome to</h2>
+        <h1 class="Store-name">SHOP n SAVE</h1>
+        <p class="welcome-note">Discover a wide range of products to suit your needs.</p>
+        <a href="{% url 'store'%}" class="btn">Shop Now!!!!!!</a>
+        
+    </div>
+    
+  </section>
+  
+  <section class="category">
+    <h2>Product Category</h2>
+    <div class="item">
+        <a href="{% url 'store'%}"><img src="{% static 'images/Fashion.png' %}" alt="Category 1"></a>
+        <a href="{% url 'store'%}"><p>Fashion</p></a>
+    </div>
+    <div class="item">
+        <a href="{% url 'store'%}"><img src="{% static 'images/home.png' %}" alt="Category 2"></a>
+        <a href="{% url 'store'%}"><p>Home</p></a>
+    </div>
+    <div class="item">
+        <a href="{% url 'store'%}"><img src="{% static 'images/images.png' %}" alt="Category 3"></a>
+        <a href="{% url 'store'%}"><p>Office</p></a>
+    </div>
+    <div class="item">
+        <a href="{% url 'store'%}"><img src="{% static 'images/Health and beauty.jpg' %}" alt="Category 4"></a>
+        <a href="{% url 'store'%}"><p>Health & Beauty</p></a>
+    </div>
+    <div class="item">
+        <a href="{% url 'store'%}"><img src="{% static 'images/Appliances.png' %}" alt="Category 5"></a>
+        <a href="{% url 'store'%}"><p>Appliances</p></a>
+    </div>
+    <div class="item">
+        <a href="{% url 'store'%}"><img src="{% static 'images/Phones.png' %}" alt="Category 6"></a>
+        <a href="{% url 'store'%}"><p>Phones</p></a>
+    </div>
+    <div class="item">
+        <a href="{% url 'store'%}"><img src="{% static 'images/Tvs.webp' %}" alt="Category 7"></a>
+        <a href="{% url 'store'%}"><p>TVs & Audio</p></a>
+    </div>
+    <div class="item">
+        <a href="{% url 'store'%}"><img src="{% static 'images/Gaming-and-sports.png' %}" alt="Category 8"></a>
+        <a href="{% url 'store'%}"><p>Gaming & Sports</p></a>
+    </div>
+    <div class="item">
+        <a href="{% url 'store'%}"><img src="{% static 'images/Computing.png' %}" alt="Category 9"></a>
+        <a href="{% url 'store'%}"><p>Computing</p></a>
+    </div>
+    <div class="item">
+        <a href="{% url 'store'%}"><img src="{% static 'images/Healthy-foods.jpg' %}" alt="Category 10"></a>
+        <a href="{% url 'store'%}"><p>Foods</p></a>
+    </div>
+    <div class="item">
+        <a href="{% url 'store'%}"><img src="{% static 'images/others.png' %}" alt="Category 11"></a>
+        <a href="{% url 'store'%}"><p>Others</p></a>
+    </div>
+  </section>
+{% endblock content %}
