@@ -1,4 +1,4 @@
-var updateBtns = document.getElementsByClassName('update-cart')
+var updateBtns = document.getElementsByName('update-cart')
 
 for (i=0; i< updateBtns.length; i++) {
     updateBtns[i].addEventListener('click', function(){
@@ -18,7 +18,7 @@ for (i=0; i< updateBtns.length; i++) {
 function updateUserOrder(productId, action){
     console.log('User is authenticated, sending data ...')
 
-    var url = '/update_item/'
+    var url = '/myecommerce/update_item/'
 
     fetch(url,{
         method: 'POST',
