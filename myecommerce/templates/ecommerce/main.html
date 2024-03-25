@@ -71,6 +71,9 @@ const csrftoken = getToken('csrftoken');
 
     <div class="form-inline my-2 my-lg-0">
      	<a href="{% url 'login'%}"class="btn btn-warning">Login</a>
+      {% if user.is_authenticated %}
+      <p>hello {{user.username}}</p>
+      {% endif %}
      	
      	<a href="{% url 'cart' %}">
     		<img  id="cart-icon" src="{% static 'images/cart.png' %}">
@@ -91,6 +94,7 @@ const csrftoken = getToken('csrftoken');
 
            
                 {% endblock content %}
+                <script src="{% static 'js/cart.js' %}"></script>
                 <footer>
                   <div class="contacts">
                     <h1>SHOP n SAVE</h1>
