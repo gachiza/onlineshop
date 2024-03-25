@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login, logout
@@ -69,7 +69,9 @@ def login(request):
 
           username = request.POST.get('username')
           user = authenticate(username=username, password=request.POST.get('password'))
-          login(request,user)
+          if user:
+               login(request)
+               return redirect("home")
      return render(request, 'ecommerce/login.html')
 
 def updateItem(request):
@@ -82,16 +84,16 @@ def updateItem(request):
      customer= request.user.customer
      product= Product.objects.get(id=productId)
      order, created = Order.objects.get_or_create(customer=customer, complete= False)
-     OrderItem, created = OrderItem.objects.get_or_create(order=order, product=product)
+     Orderitem, created = OrderItem.objects.get_or_create(order=order, product=product)
 
      if action == 'add':
-          OrderItem.quantity  = (OrderItem.quantity + 1)
+          Orderitem.quantity  = (Orderitem.quantity + 1)
      elif action == 'remove':
-          OrderItem.quantity = (OrderItem.quantity - 1)
-     OrderItem.save()
+          Orderitem.quantity = (Orderitem.quantity - 1)
+     Orderitem.save()
 
-     if OrderItem <= 0:
-          OrderItem.delete()
+     if Orderitem.quantity <= 0:
+          Orderitem.delete()
 
      return JsonResponse('Item was added', safe=False)
 
