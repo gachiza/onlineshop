@@ -1,5 +1,7 @@
 from django.urls import path 
 from . import views 
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
         #Leave as empty string for base url
@@ -13,4 +15,4 @@ urlpatterns = [
     path('items/', views.item_list, name='item_list'),
     
 
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
