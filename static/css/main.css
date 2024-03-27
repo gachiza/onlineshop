@@ -132,34 +132,22 @@ h1,h2,h3,h4,h5,h6{
 
 .gradient-custom-3 {
 	/* fallback for old browsers */
-	background: #84fab0;
-	
 	/* Chrome 10-25, Safari 5.1-6 */
-	background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
-	
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
+	background:  rgb(255, 179, 38);
 	}
 	.gradient-custom-4 {
 	/* fallback for old browsers */
-	background: #84fab0;
-	
 	/* Chrome 10-25, Safari 5.1-6 */
-	background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
-	
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+	
 	}
 
 .gradient-custom {
 	/* fallback for old browsers */
-	background: #6a11cb;
-	
 	/* Chrome 10-25, Safari 5.1-6 */
-	background: -webkit-linear-gradient(to right, rgb(17, 203, 104), rgba(37, 117, 252, 1));
-	
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	background: linear-gradient(to right, rgb(17, 203, 23), rgba(37, 117, 252, 1))
+	background:  rgb(255, 179, 38);
 }
 
 
@@ -413,7 +401,7 @@ section {
 
 
 footer {
-    background-color: #333;
+    background-color: white;
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -452,7 +440,7 @@ footer {
 	flex-direction: row;
 	font-family:"Poppins";
 	color:white;
-	background-color: #006400;
+	background-color:green;
 	padding-top:50px;
 	padding-bottom:20px;
 	font-size:17px;
@@ -474,4 +462,3 @@ footer {
 	width:40px;
 	height:30px;
 	object-fit: cover;
-}
