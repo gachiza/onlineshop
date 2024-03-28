@@ -1,0 +1,40 @@
+{% extends 'ecommerce/main.html' %}
+{% load static %}
+{% block content %}
+
+<section class="hero">
+    <div class="container">
+       
+        <h1 class="Store-name">SHOPnSAVE</h1>
+        <p class="welcome-note"><b>Discover a wide range of products to suit your needs.</b></p>
+        <a href="{% url 'store'%}" class="btn">Shop Now</a>
+        
+    </div>
+    
+  </section>
+  
+  <section class="category">
+    <h2>PRODUCT CATEGORY</h2>
+    <div class="item">
+        <a href="{% url 'store'%}"><img src="{% static 'images/fashion.jpg' %}" alt="Category 1"></a>
+        <a href="{% url 'store'%}"><p><b>Fashion</b></p></a>
+        </div>
+    <div class="item">
+        <a href="{% url 'store'%}"><img src="{% static 'images/cosmetics.jpg' %}" alt="Category 4"></a>
+        <a href="{% url 'store'%}"><p><b>Cosmetics</b></p></a>
+    </div>
+    <div class="item">
+        <a href="{% url 'store'%}"><img src="{% static 'images/home appliances.jpg' %}" alt="Category 5"></a>
+        <a href="{% url 'store'%}"><p><b>Home Appliances</b></p></a>
+    </div>
+    <div class="item">
+        <a href="{% url 'store'%}"><img src="{% static 'images/food.jpg' %}" alt="Category 10"></a>
+        <a href="{% url 'store'%}"><p><b>Foods</b></p></a>
+    </div>
+        <div class="item">
+        <a href="{% url 'store'%}"><img src="{% static 'images/others.jpg' %}" alt="Category 6"></a>
+        <a href="{% url 'store'%}"><p><b>Others</b></p></a>
+    </div>
+    </div>
+  </section>
+{% endblock content %}
