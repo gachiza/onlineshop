@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import dotenv
 import os
+import dj_database_url
+from decouple import config, Csv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -24,6 +27,7 @@ SECRET_KEY = 'django-insecure-shh)19ot@_w0j$ao=i%%t3&e@ujxq!3ooi#%35j!=9x!#_%w*u
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+DATABASE_URL = 'postgresql://postgres:MEJgxxggfqRNDUsfpxqTOiZhcOIYNVno@roundhouse.proxy.rlwy.net:19541/railway'
 
 ALLOWED_HOSTS = []
 
@@ -75,17 +79,9 @@ WSGI_APPLICATION = 'myecom.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# load database from the DATABASE_URL environment variable
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ssekyanzielvis$default',
-        'USER': 'ssekyanzielvis',
-        'PASSWORD': '12345678',
-        'HOST': 'ssekyanzielvis.mysql.pythonanywhere-services.com',
-        'PORT': '30693551',
-    }
-}
-
+    "default":dj_database_url.config(default = DATABASE_URL, conn_max_age=1800),}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
