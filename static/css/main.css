@@ -262,7 +262,7 @@ section {
 }
 
 #categories ul li {
-    margin: 20px 20px 10px 20px;
+    margin: 30px 20px 10px 20px;
 }
 
 #categories ul li a {
@@ -309,11 +309,11 @@ section {
   }
   
 
-  .footer-1 {
-    background-color: #afafaf;
-    color: #fff;
-    padding: 30px 0;
-    margin: 20px;
+  footer{
+
+  }
+  footer h2, h1 {
+    color:white;
   }
   
   .container1 {
@@ -462,3 +462,13 @@ footer {
 	width:40px;
 	height:30px;
 	object-fit: cover;
+}
+.reachout span small {
+  margin-left:10px;
+}
+.vh-80{
+  width:100%;
+}
+.login-btn {
+  border-radius: 5px;
+}
