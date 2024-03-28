@@ -131,12 +131,16 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .gradient-custom-3 {
+  color: black;
+  font-size: 20px;
 	/* fallback for old browsers */
 	/* Chrome 10-25, Safari 5.1-6 */
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	
 	}
 	.gradient-custom-4 {
+    color: black;
+    font-size: 20px;
 	/* fallback for old browsers */
 	/* Chrome 10-25, Safari 5.1-6 */
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -144,6 +148,8 @@ h1,h2,h3,h4,h5,h6{
 	}
 
 .gradient-custom {
+  color: black;
+  font-size: 20px;
 	/* fallback for old browsers */
 	/* Chrome 10-25, Safari 5.1-6 */
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -309,7 +315,8 @@ section {
   }
   
 
-  footer{
+  footer{ h2, h1 {
+      color:white;}
 
   }
   footer h2, h1 {
