@@ -27,7 +27,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .bg-dark{
-	background-color: #388707!important;
+	background-color:rgb(2, 153, 2)!important;
 }
 
 #cart-icon{
@@ -134,7 +134,7 @@ h1,h2,h3,h4,h5,h6{
 	/* fallback for old browsers */
 	/* Chrome 10-25, Safari 5.1-6 */
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	background:  rgb(255, 179, 38);
+	
 	}
 	.gradient-custom-4 {
 	/* fallback for old browsers */
@@ -147,7 +147,7 @@ h1,h2,h3,h4,h5,h6{
 	/* fallback for old browsers */
 	/* Chrome 10-25, Safari 5.1-6 */
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	background:  rgb(255, 179, 38);
+	
 }
 
 
@@ -440,7 +440,7 @@ footer {
 	flex-direction: row;
 	font-family:"Poppins";
 	color:white;
-	background-color:green;
+	background-color:rgb(2, 153, 2);
 	padding-top:50px;
 	padding-bottom:20px;
 	font-size:17px;
