@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import *
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login as auth_login, logout
 from django.http import JsonResponse
 import json
 from .forms import CustomerForm
@@ -56,7 +56,7 @@ def signup(request):
           username= form.cleaned_data.get('username')
           raw_password = form.cleaned_data.get('password1')
           user = authenticate(username=username, password= raw_password)
-          login(request,user)
+          auth_login(request,user)
           return store(request)
      
      context={"form":form}
@@ -71,9 +71,13 @@ def login(request):
           username = request.POST.get('username')
           user = authenticate(username=username, password=request.POST.get('password'))
           if user:
-               login(request)
+               auth_login(request,user)
                return redirect("home")
      return render(request, 'ecommerce/login.html')
+
+def log_out(request):
+     logout(request)
+     return redirect('home')
 
 def updateItem(request):
      data = json.loads(request.body)

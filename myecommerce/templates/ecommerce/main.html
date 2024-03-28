@@ -70,9 +70,11 @@ const csrftoken = getToken('csrftoken');
     </div>
 
     <div class="form-inline my-2 my-lg-0">
-     	<a href="{% url 'login'%}"class="btn btn-warning">Login</a>
+     	
       {% if user.is_authenticated %}
-      <p>hello {{user.username}}</p>
+      <p>hello {{user.username}} <a href="{% url 'logout' %}">Logout</a></p>
+      {% else %}
+      <a href="{% url 'login'%}"class="btn btn-warning">Login</a>
       {% endif %}
      	
      	<a href="{% url 'cart' %}">
