@@ -27,7 +27,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .bg-dark{
-	background-color:rgb(2, 153, 2)!important;
+	background-color:blue!important;
 }
 
 #cart-icon{
@@ -278,19 +278,19 @@ section {
 
 
 .category {
-    margin: 20px;
+    margin: 30px;
     text-align: center;
   }
   
   .category h2 {
-    font-size: 24px;
+    font-size: 30px;
     margin: 20px;
     text-align: center;
   }
   
   .item {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 50px;
     text-align: center;
   }
   
@@ -440,7 +440,7 @@ footer {
 	flex-direction: row;
 	font-family:"Poppins";
 	color:white;
-	background-color:rgb(2, 153, 2);
+	background-color:blue;
 	padding-top:50px;
 	padding-bottom:20px;
 	font-size:17px;
@@ -470,5 +470,8 @@ footer {
   width:100%;
 }
 .login-btn {
-  border-radius: 5px;
+  border-radius: 10px;
+}
+.register-btn {
+  border-radius: 10px;
 }

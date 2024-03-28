@@ -33,18 +33,24 @@
                   <label class="form-label" for="form3Example4cdg">Repeat your password</label>
                 </div>
 
-                <div class="form-check d-flex justify-content-center mb-5">
+                <div class="form-check d-flex align-items-center justify-content-left mb-5">
                   <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
                   <label class="form-check-label" for="form2Example3g">
-                   <a href="#!" class="text-body"><br><u> I Agree to the Terms of service</u>  </a>
+                   <a href="#!" class="text-body"><u> I Agree to the Terms and Conditions</u>  </a>
                   </label>
                 </div>
 
-                <div class="d-flex justify-content-center">
-                    <div class="btn btn-warning" type="submit">Register</div>
+                <div class="d-flex justify-content-left">
+                    <div class="btn btn-warning register-btn" type="submit">Register</div>
                 </div>
-
-                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="{% url 'login'%}"
+                <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                  <a href="#!" class="text-black"><i class="fa fa-facebook-f fa-lg"></i></a>
+                  <a href="#!" class="text-black"><i class="fa fa-twitter fa-lg mx-4 px-2"></i></a>
+                  <a href="#!" class="text-black"><i class="fa fa-instagram fa-lg"></i></a>
+                  <a href="#!" class="text-black"><i class="fa fa-youtube fa-lg mx-4 px-2"></i></a>
+                  
+                </div>
+                <p class="text-center text-muted mt-5 mb-0">Already have an account? <a href="{% url 'login'%}"
                     class="fw-bold text-body"><u>Login here</u></a></p>
 
               </form>
