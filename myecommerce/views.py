@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login as auth_login, logout
 from django.http import JsonResponse
 import json
+from .forms import CustomerForm
 
 
 def item_list(request):
@@ -100,4 +101,14 @@ def updateItem(request):
           Orderitem.delete()
 
      return JsonResponse('Item was added', safe=False)
+def upload_file(request):
+    if request.method == 'POST':
+        form = MyForm(request.POST, request.FILES)
+        if form.is_valid():
+            # Process the form data
+            form.save()
+            # Redirect or render success page
+    else:
+        form = MyForm()
+    return render(request, 'upload.html', {'form': form})
 

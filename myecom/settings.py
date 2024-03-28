@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'myecom.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ssekyanzielvis$default',
+        'USER': 'ssekyanzielvis',
+        'PASSWORD': '12345678',
+        'HOST': 'ssekyanzielvis.mysql.pythonanywhere-services.com',
+        'PORT': '30693551',
     }
 }
 
