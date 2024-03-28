@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login as auth_login, logout
 from django.http import JsonResponse
 import json
 from .forms import CustomerForm
+from .forms import GroupForm
 
 
 def item_list(request):
@@ -111,4 +112,14 @@ def upload_file(request):
     else:
         form = MyForm()
     return render(request, 'upload.html', {'form': form})
+
+def create_group(request):
+    if request.method == 'POST':
+        form = GroupForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            # Redirect or show success message
+    else:
+        form = GroupForm()
+    return render(request, 'create_group.html', {'form': form})
 
