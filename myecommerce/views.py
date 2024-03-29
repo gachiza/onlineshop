@@ -8,6 +8,7 @@ from .forms import CustomerForm
 from .forms import GroupForm
 from .forms import SearchForm
 from .models import Product
+from django.http import HttpResponse
 
 
 
@@ -145,4 +146,7 @@ def product_search(request):
     else:
         search_results = None
     return render(request, 'product_search_results.html', {'search_results': search_results, 'query': query})
+def email_view(request):
+    # Your view logic here
+    return HttpResponse("This is the view for abdulssekyanzi@gmail.com")
 
