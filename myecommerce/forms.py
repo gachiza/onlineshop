@@ -15,3 +15,5 @@ class GroupForm(forms.ModelForm):
     class Meta:
         model = Group
         fields = ['name', 'image']
+class SearchForm(forms.Form):
+    query = forms.CharField(label='Search')
