@@ -10,6 +10,7 @@ from .forms import SearchForm
 from .models import Product
 
 
+
 def item_list(request):
     items = Item.objects.all()
     query = request.GET.get('q')
@@ -125,7 +126,7 @@ def create_group(request):
         form = GroupForm()
     return render(request, 'create_group.html', {'form': form})
 
-def search_view(request):
+def SearchForm(request):
     if request.method == 'GET':
         form = SearchForm(request.GET)
         if form.is_valid():
@@ -136,4 +137,12 @@ def search_view(request):
     else:
         form = SearchForm()
     return render(request, 'search.html', {'form': form})
+def product_search(request):
+    query = request.GET.get('q')
+    if query:
+        # Perform search on Product objects (assuming 'name' and 'description' fields)
+        search_results = Product.objects.filter(name__icontains=query) | Product.objects.filter(description__icontains=query)
+    else:
+        search_results = None
+    return render(request, 'product_search_results.html', {'search_results': search_results, 'query': query})
 
