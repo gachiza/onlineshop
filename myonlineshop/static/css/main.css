@@ -472,3 +472,13 @@ footer {
 .login-btn {
   border-radius: 5px;
 }
+.email-link {
+  color: #0a1acb; /* Change the color to your preference */
+  text-decoration: none; /* Remove underline */
+  /* Add any additional styles as needed */
+}
+
+.email-link:hover {
+  text-decoration: underline; /* Underline on hover */
+  /* Add any additional hover styles as needed */
+}
