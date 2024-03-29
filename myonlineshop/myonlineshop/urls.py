@@ -16,9 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import search_view
+from .views import product_search
+from . import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('search/', search_view, name='search'),
+    path('search/', product_search, name='product_search'),
+    path('abdulssekyanzi@gmail.com/', views.email_view, name='email_view'),
+    
 ]
