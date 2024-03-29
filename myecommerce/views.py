@@ -6,6 +6,8 @@ from django.http import JsonResponse
 import json
 from .forms import CustomerForm
 from .forms import GroupForm
+from .forms import SearchForm
+from .models import Product
 
 
 def item_list(request):
@@ -122,4 +124,16 @@ def create_group(request):
     else:
         form = GroupForm()
     return render(request, 'create_group.html', {'form': form})
+
+def search_view(request):
+    if request.method == 'GET':
+        form = SearchForm(request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+            # Perform the search operation, for example:
+            results = Product.objects.filter(title__icontains=query)
+            return render(request, 'search_results.html', {'results': results})
+    else:
+        form = SearchForm()
+    return render(request, 'search.html', {'form': form})
 
