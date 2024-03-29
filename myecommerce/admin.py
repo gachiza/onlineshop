@@ -6,5 +6,7 @@ admin.site.register(Product)
 admin.site.register(Order)
 admin.site.register(OrderItem)
 admin.site.register(DeliveryAddress)
+admin.site.register(MyForm)
+admin.site.register(Group)
 
 # Register your models here.
