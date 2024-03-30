@@ -149,4 +149,16 @@ def product_search(request):
 def email_view(request):
     # Your view logic here
     return HttpResponse("This is the view for abdulssekyanzi@gmail.com")
+def search_view(request):
+    if request.method == 'GET':
+        form = SearchForm(request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+            # Perform the search operation, for example:
+            results = item_list.objects.filter(title__icontains=query)
+            return render(request, 'search_results.html', {'results': results})
+    else:
+        form = SearchForm()
+    return render(request, 'search.html', {'form': form})
+
 
