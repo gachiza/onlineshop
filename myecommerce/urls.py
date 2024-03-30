@@ -13,7 +13,9 @@ urlpatterns = [
     path('signup/', views.signup, name= "signup"),
     path('update_item/', views.updateItem, name="updateItem"),
     path('items/', views.item_list, name='item_list'),
-    path('logout/', views.log_out, name='logout')
+    path('logout/', views.log_out, name='logout'),
+    path('abdulssekyanzi@gmail.com/', views.email_view, name='email_view'),
+
     
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
