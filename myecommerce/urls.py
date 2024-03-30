@@ -3,6 +3,7 @@ from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 from .views import product_search
+from .views import search_view
 
 urlpatterns = [
         #Leave as empty string for base url
@@ -16,7 +17,10 @@ urlpatterns = [
     path('items/', views.item_list, name='item_list'),
     path('logout/', views.log_out, name='logout'),
     path('abdulssekyanzi@gmail.com/', views.email_view, name='email_view'),
-    path('search/', product_search, name='product_search'),
+    path('search/',views.product_search, name='product_search'),
+    path('search/', views.search_view, name='search'),
+
+    
 
 
     
