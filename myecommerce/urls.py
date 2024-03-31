@@ -4,6 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from .views import product_search
 from .views import search_view
+from .views import terms_and_conditions
 
 urlpatterns = [
         #Leave as empty string for base url
@@ -19,6 +20,7 @@ urlpatterns = [
     path('abdulssekyanzi@gmail.com/', views.email_view, name='email_view'),
     path('search/',views.product_search, name='product_search'),
     path('search/', views.search_view, name='search'),
+    path('terms-and-conditions/', terms_and_conditions, name='terms_and_conditions'),
 
     
 
