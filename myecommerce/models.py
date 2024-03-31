@@ -93,3 +93,9 @@ class MyForm(models.Model):
 class Group(models.Model):
     name = models.CharField(max_length=100, null=True, blank=True)
     image = models.ImageField(upload_to='group_images/', null=True, blank=True)
+    
+class TermsAndConditions(models.Model):
+    content = models.TextField()
+
+    def __str__(self):
+        return "Terms and Conditions"
