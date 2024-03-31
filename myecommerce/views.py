@@ -9,6 +9,7 @@ from .forms import GroupForm
 from .forms import SearchForm
 from .models import Product
 from django.http import HttpResponse
+from .models import TermsAndConditions
 
 
 
@@ -160,5 +161,8 @@ def search_view(request):
     else:
         form = SearchForm()
     return render(request, 'search.html', {'form': form})
+def terms_and_conditions(request):
+    terms = TermsAndConditions.objects.first()  # Assuming you have only one terms and conditions entry
+    return render(request, 'terms_and_conditions.html', {'terms': terms})
 
 
