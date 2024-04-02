@@ -10,6 +10,7 @@ from .forms import SearchForm
 from .models import Product
 from django.http import HttpResponse
 from .models import TermsAndConditions
+from .forms import BugReportForm
 
 
 
@@ -164,5 +165,18 @@ def search_view(request):
 def terms_and_conditions(request):
     terms = TermsAndConditions.objects.first()  # Assuming you have only one terms and conditions entry
     return render(request, 'terms_and_conditions.html', {'terms': terms})
+
+def bug_report(request):
+    if request.method == 'POST':
+        form = BugReportForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('bug_report_success')
+    else:
+        form = BugReportForm()
+    return render(request, 'bug_report.html', {'form': form})
+
+def bug_report_success(request):
+    return render(request, 'bug_report_success.html')
 
 

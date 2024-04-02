@@ -21,6 +21,8 @@ urlpatterns = [
     path('search/',views.product_search, name='product_search'),
     path('search/', views.search_view, name='search'),
     path('terms-and-conditions/', terms_and_conditions, name='terms_and_conditions'),
+    path('bug-report/', views.bug_report, name='bug_report'),
+    path('bug-report/success/', views.bug_report_success, name='bug_report_success'),
 
     
 
