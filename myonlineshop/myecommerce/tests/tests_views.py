@@ -1,7 +1,7 @@
 from django.test import TestCase, Client
 from django.urls import reverse
 from myecommerce.models import Item, Customer, Product, Order, OrderItem, DeliveryAddress
-from 
+ 
 
 
 
@@ -12,5 +12,5 @@ class Testviews(TestCase):
 
         response = client.get(reverse('list'))
 
-        self.assertEquals(response.status_code, 200)
+        self.assertEqual(response.status_code, 200)
         self.assertTemplateUse()
