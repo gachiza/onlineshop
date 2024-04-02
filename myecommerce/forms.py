@@ -2,6 +2,7 @@ from django.contrib.auth.models import User
 from django import forms
 from .models import Customer
 from .models import Group
+from .models import BugReport
 
 class UserLogin(): 
     class Meta:
@@ -17,3 +18,7 @@ class GroupForm(forms.ModelForm):
         fields = ['name', 'image']
 class SearchForm(forms.Form):
     query = forms.CharField(label='Search')
+class BugReportForm(forms.ModelForm):
+    class Meta:
+        model = BugReport
+        fields = ['title', 'description', 'reported_by']
