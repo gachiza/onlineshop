@@ -161,7 +161,7 @@ def search_view(request):
             return render(request, 'search_results.html', {'results': results})
     else:
         form = SearchForm()
-    return render(request, 'search.html', {'form': form})
+    return render(request, 'ecommerce/search_results.html', {'form': form})
 def terms_and_conditions(request):
     terms = TermsAndConditions.objects.first()  # Assuming you have only one terms and conditions entry
     return render(request, 'terms_and_conditions.html', {'terms': terms})
