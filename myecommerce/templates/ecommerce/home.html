@@ -9,8 +9,40 @@
         <p class="welcome-note"><b>Discover a wide range of products and services at an affordable price.         
         </b></p>
         <a href="{% url 'store'%}" class="btn">Shop Now</a>
+
+        <!-- <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="{% static 'images/sale.png' %}" alt="Slide 1">
+                
+            </div>
+            <div class="slide fade">
+                <img src="{% static 'images/Shopper.png' %}" alt="Slide 2">
+               
+            </div>
+            <div class="slide fade">
+                <img src="{% static 'images/Shopper-2.png' %}" alt="Slide 3">
+                
+            </div>
+            <div class="slide fade">
+                <img src="{% static 'images/Shopper-3.png' %}" alt="Slide 3">
+                
+            </div>
+            <div class="slide fade">
+                <img src="{% static 'images/Shopper-4.png' %}" alt="Slide 3">
+                
+            </div>
+            <div class="slide fade">
+                <img src="{% static 'images/Shopping-bags.png' %}" alt="Slide 3">
+                
+            </div>
+            <div class="slide fade">
+            <img src="{% static 'images/Shopping.png' %}" alt="Slide 3">
+                
+            </div>
+        </div>
+        <script src="{% static 'js/Home-slideshow.js' %}"></script>
         
-    </div>
+    </div> -->
     
   </section>
   
@@ -19,7 +51,7 @@
     <div class="item">
         <a href="{% url 'store'%}"><img src="{% static 'images/fashion.jpg' %}" alt="Category 1"></a>
         <a href="{% url 'store'%}"><p><b>Fashion</b></p></a>
-        </div>
+    </div>
     <div class="item">
         <a href="{% url 'store'%}"><img src="{% static 'images/cosmetics.jpg' %}" alt="Category 4"></a>
         <a href="{% url 'store'%}"><p><b>Cosmetics</b></p></a>
@@ -35,20 +67,34 @@
         <div class="item">
             <a href="{% url 'store'%}"><img src="{% static 'images/hair accessories.jpg' %}" alt="Category 1"></a>
             <a href="{% url 'store'%}"><p><b>Hair Accessories</b></p></a>
-            </div>
-            <div class="item">
-                <a href="{% url 'store'%}"><img src="{% static 'images/personal care.jpg' %}" alt="Category 1"></a>
-                <a href="{% url 'store'%}"><p><b>Personal Care</b></p></a>
-                </div>
-                <div class="item">
-                    <a href="{% url 'store'%}"><img src="{% static 'images/computers.jpg' %}" alt="Category 1"></a>
-                    <a href="{% url 'store'%}"><p><b>Computers</b></p></a>
-                    </div>
+        </div>
+        <div class="item">
+            <a href="{% url 'store'%}"><img src="{% static 'images/personal care.jpg' %}" alt="Category 1"></a>
+            <a href="{% url 'store'%}"><p><b>Personal Care</b></p></a>
+        </div>
+        <div class="item">
+            <a href="{% url 'store'%}"><img src="{% static 'images/computers.jpg' %}" alt="Category 1"></a>
+            <a href="{% url 'store'%}"><p><b>Computers</b></p></a>
+        </div>
                     
         <div class="item">
-        <a href="{% url 'store'%}"><img src="{% static 'images/others.jpg' %}" alt="Category 6"></a>
-        <a href="{% url 'store'%}"><p><b>Others</b></p></a>
+            <a href="{% url 'store'%}"><img src="{% static 'images/others.jpg' %}" alt="Category 6"></a>
+            <a href="{% url 'store'%}"><p><b>Others</b></p></a>
     </div>
-    </div>
+    <!-- <div class="row">
+        {%for product in products %}
+        <div class="product">
+            
+            <div class="box-element product">
+                <img class="thumb" src="{{product.imageURL}}">
+                <h6><strong>{{product.name}}</strong></h6>
+                <hr>
+                <a data-product="{{product.id}}" data-action = "add" name="update-cart" class="btn btn-outline-success add-btn update-cart" href="#">Add to Cart</a>	        
+                <a class="btn btn-outline-success" href="#">View</a>    
+                <h4 style="float: right;"><strong>${{product.price|floatformat}}</strong></h4>
+            </div>
+        </div>
+        {% endfor %}
+    </div> -->
   </section>
 {% endblock content %}
