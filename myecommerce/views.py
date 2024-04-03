@@ -11,6 +11,8 @@ from .models import Product
 from django.http import HttpResponse
 from .models import TermsAndConditions
 from .forms import BugReportForm
+from .forms import FeedbackForm
+
 
 
 
@@ -147,7 +149,7 @@ def product_search(request):
         search_results = Product.objects.filter(name__icontains=query) | Product.objects.filter(description__icontains=query)
     else:
         search_results = None
-    return render(request, 'product_search_results.html', {'search_results': search_results, 'query': query})
+    return render(request, 'ecommerce/search_results.html', {'search_results': search_results, 'query': query})
 def email_view(request):
     # Your view logic here
     return HttpResponse("This is the view for abdulssekyanzi@gmail.com")
@@ -179,4 +181,16 @@ def bug_report(request):
 def bug_report_success(request):
     return render(request, 'bug_report_success.html')
 
+def feedback(request):
+    if request.method == 'POST':
+        form = FeedbackForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('thankyou')
+    else:
+        form = FeedbackForm()
+        
+    return render(request, 'ecommerce/feedback.html', {'form': form})
 
+def thankyou(request):
+    return render(request, 'ecommerce/thankyou.html')

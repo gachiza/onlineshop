@@ -367,7 +367,7 @@ section {
     height: 40px;
   }
   
-  .wrapper {
+  /* .wrapper {
     position: relative;
     display: flex;
     min-width: 100px;
@@ -403,7 +403,7 @@ section {
   .search:hover, .search:focus {
     border: 1.5px solid #009688;
     background-color: white;
-  }
+  } */
 
 
 
@@ -436,10 +436,10 @@ footer ul li a:hover {
 
 
 
-* {
+/* * {
 	margin:0;
 	padding: 0;
-}
+} */
 footer {
 	display:flex;
 	justify-content: center;

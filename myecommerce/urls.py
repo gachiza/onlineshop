@@ -8,8 +8,8 @@ from .views import terms_and_conditions
 
 urlpatterns = [
         #Leave as empty string for base url
-	path('', views.store, name="store"),
-    path('home/', views.home, name= "home"),
+	path('', views.home, name="home"),
+    path('store/', views.store, name= "store"),
 	path('cart/', views.cart, name="cart"),
 	path('checkout/', views.checkout, name="checkout"),
     path('login/', views.login, name="login"),
@@ -23,6 +23,8 @@ urlpatterns = [
     path('terms-and-conditions/', terms_and_conditions, name='terms_and_conditions'),
     path('bug-report/', views.bug_report, name='bug_report'),
     path('bug-report/success/', views.bug_report_success, name='bug_report_success'),
+    path('feedback/', views.feedback, name= "feedback"),
+    path('feedback/success/', views.thankyou, name= "thankyou"),
 
     
 

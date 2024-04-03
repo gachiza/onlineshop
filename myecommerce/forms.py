@@ -3,6 +3,8 @@ from django import forms
 from .models import Customer
 from .models import Group
 from .models import BugReport
+from .models import Feedback
+
 
 class UserLogin(): 
     class Meta:
@@ -22,3 +24,9 @@ class BugReportForm(forms.ModelForm):
     class Meta:
         model = BugReport
         fields = ['title', 'description', 'reported_by']
+
+class FeedbackForm(forms.ModelForm):
+    class Meta:
+        model = Feedback
+        fields = ['name', 'email', 'feedback']
+
